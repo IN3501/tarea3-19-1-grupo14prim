@@ -9,7 +9,7 @@ Deja tu testimonio
 <div id="descripcion" class="container">
     <h1>Deja tu testimonio ¿Cómo fue trabajar con nosotros?</h1>
 
-    <form action="/exitotestimonio" method="POST" autocomplete="off"> {% csrf_token %}
+    <form action="/guardar" method="POST" autocomplete="off"> {% csrf_token %}
 
     <div class="form-group">
       <label for="exampleInputEmail1">Ingrese su nombre</label>
@@ -27,7 +27,7 @@ Deja tu testimonio
 
    <div class="form-group">
       <label for="exampleFormControlTextarea">Testimonio</label>
-      <textarea class="form-control" id="exampleFormControlTextarea" rows="3"></textarea>
+      <textarea class="form-control" id="exampleFormControlTextarea" rows="3" name="comentario"></textarea>
     </div>
 
 

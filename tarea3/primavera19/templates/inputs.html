@@ -10,7 +10,7 @@ Consulta de Servicios
 <div id="descripcion" class="container">
     <h1>Servicios</h1>
 
-    <form action="/exitoinputs" method="POST" autocomplete="off"> {% csrf_token %}
+    <form action="/consulta" method="POST" autocomplete="off"> {% csrf_token %}
 
     <div class="form-group">
       <label for="exampleInputEmail1">Nombre de Empresa/Particular interesado</label>
@@ -19,7 +19,7 @@ Consulta de Servicios
 
     <div class="form-group">
       <label for="exampleFormControlTextarea">Detalle de carga (tipo, peso aproximado, lugar de retiro y lugar de despacho)</label>
-      <textarea class="form-control" id="exampleFormControlTextarea" rows="3"></textarea>
+      <textarea class="form-control" id="exampleFormControlTextarea" rows="3" name="detalle"></textarea>
     </div>
 
      <div class="form-group">
@@ -61,7 +61,7 @@ Consulta de Servicios
    
     <div class="form-group">
       <label for="exampleFile">Fotografía de la carga (opcional)</label>
-      <input type="file" class="form-control-file" id="exampleFile">
+      <input type="file" class="form-control-file" id="exampleFile" name="foto">
     </div>
 
     
