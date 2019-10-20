@@ -38,7 +38,21 @@ def iniciar(request):
 	return render(request, "exitoinicio.html")
 
 def consulta(request):
+	nombre = request.POST['inputText']
+	detalle = request.POST['detalle']
+	numero = request.POST['inputNumber']
+	fecha = request.POST['inputDate']
+	correo = request.POST['inputEmail']
+	camion = request.POST['inputCarrera']
+	foto = request.POST['foto']
+	consulta=Consulta(nombre=nombre,detalle=detalle,numero=numero,fecha=fecha,correo=correo,camion=camion,foto=foto)
+	consulta.save()
 	return render(request, "exitoinputs.html")
 
 def guardar(request):
+	nombre = request.POST['inputText']
+	correo = request.POST['inputEmail']
+	comentario = request.POST['comentario']
+	testimonio=Testimonio(nombre=nombre, correo=correo, testimonio=comentario)
+	testimonio.save()
 	return render(request, "exitotestimonio.html")
