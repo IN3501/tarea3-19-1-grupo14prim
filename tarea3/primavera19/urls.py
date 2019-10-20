@@ -12,4 +12,8 @@ urlpatterns = [
 	path('exitoinicio', iniciar, name= 'exitoinicio'),
 	path('exitoinputs', consulta, name= 'exitoinputs'),
 	path('exitotestimonio', guardar, name= 'exitotestimonio'),
+	path('cuenta',cuenta, name='cuenta'),
+	path('iniciar', iniciar, name='iniciar'),
+	path('consulta', consulta, name='consulta'),
+	path('guardar', guardar, name='guardar'),
 ]

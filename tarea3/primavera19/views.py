@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Usuario, Testimonio, Consulta
 
 # Create your views here.
 def index(request):
@@ -18,6 +19,16 @@ def contacto(request):
 
 def testimonios(request):
 	return render(request, 'testimonios.html')		
+
+def exitocreacion(request):
+	return render(request, 'exitocreacion.html')
+
+def exitoinicio(request):
+	return render(request, 'exitoinicio.html')
+
+def exitoinputs(request):
+	return render(request, 'exitoinputs.html')
+
 
 def cuenta(request):
 	#guarda la información de la cuenta creada
@@ -48,6 +59,9 @@ def consulta(request):
 	consulta=Consulta(nombre=nombre,detalle=detalle,numero=numero,fecha=fecha,correo=correo,camion=camion,foto=foto)
 	consulta.save()
 	return render(request, "exitoinputs.html")
+
+def exitotestimonio(request):
+	return render(request, 'exitotestimonio.html')
 
 def guardar(request):
 	nombre = request.POST['inputText']
