@@ -1,0 +1,49 @@
+{% extends 'navbar.html' %}
+
+{% block title %}
+Regístrate
+{% endblock title %}
+
+{% block content %}
+
+<div id="descripcion" class="container">
+    <h1>Crea tu usuario</h1>
+
+    <form action="/exitocreacion" method="POST" autocomplete="off"> {% csrf_token %}
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Ingrese su Nombre y Apellido:</label>
+      <input type="text" class="form-control" id="exampleText" placeholder="ej: Juan Pérez" name="usuario">
+    </div>
+
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Ingrese su correo electrónico:</label>
+      <input type="email" class="form-control" id="exampleEmail" placeholder="ej: juan@mail.com" name="correo">
+    </div>
+
+
+    <div class="form-group">
+      <label for="exampleInputPassword1">Ingrese su contraseña:</label>
+      <input type="password" class="form-control" id="examplePassword" placeholder="ingrese contraseña" name="contraseña">
+    </div>
+
+
+     <div class="form-group">
+      <label for="exampleNumber">Ingrese su edad:</label>
+      <input type="number" class="form-control" id="exampleNumber" placeholder="ej: 21" name="edad">
+    </div>
+
+
+    <br>
+
+
+    <div class="form-group">
+    <button type="submit" class="btn btn-primary">Crear Cuenta</button>
+    </div>
+  
+  </form>
+       
+</div>
+
+{% endblock content %}

@@ -1,0 +1,80 @@
+
+{% extends 'navbar.html' %}
+
+{% block title %}
+Consulta de Servicios
+{% endblock title %}
+
+{% block content %}
+
+<div id="descripcion" class="container">
+    <h1>Servicios</h1>
+
+    <form action="/exitoinputs" method="POST" autocomplete="off"> {% csrf_token %}
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Nombre de Empresa/Particular interesado</label>
+      <input type="text" class="form-control" id="exampleText" placeholder="Ingrese texto" name="inputText">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleFormControlTextarea">Detalle de carga (tipo, peso aproximado, lugar de retiro y lugar de despacho)</label>
+      <textarea class="form-control" id="exampleFormControlTextarea" rows="3"></textarea>
+    </div>
+
+     <div class="form-group">
+      <label for="exampleNumber">Ingrese su número de contacto</label>
+      <input type="number" class="form-control" id="exampleNumber" placeholder="Ingrese numero" name="inputNumber">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleNumber">Ingrese fecha tentativa</label>
+      <input type="date" class="form-control" id="exampleDate" placeholder="Ingrese Fecha" name="inputDate">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Ingrese email de contacto</label>
+      <input type="email" class="form-control" id="exampleEmail" placeholder="Ingrese email" name="inputEmail">
+    </div>
+
+    
+    Tipo de camion 
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="inputCarrera" id="exampleRadios1" value="PLano" checked>
+      <label class="form-check-label" for="exampleRadios1">
+        Plano
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="inputCarrera" id="exampleRadios2" value="Frigorifico">
+      <label class="form-check-label" for="exampleRadios2">
+        Frigorifico
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="inputCarrera" id="exampleRadios3" value="Con carro">
+      <label class="form-check-label" for="exampleRadios3">
+        Con carro
+      </label>
+    </div>
+
+   
+    <div class="form-group">
+      <label for="exampleFile">Fotografía de la carga (opcional)</label>
+      <input type="file" class="form-control-file" id="exampleFile">
+    </div>
+
+    
+
+    <br>
+
+
+    <div class="form-group">
+    <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+  
+  </form>
+       
+</div>
+
+{% endblock content %}
