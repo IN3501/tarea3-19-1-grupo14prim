@@ -21,15 +21,17 @@ def testimonios(request):
 
 def cuenta(request):
 	#guarda la información de la cuenta creada
-	usuario = request.POST['usuario']
+	nombre = request.POST['nombre']
 	correo = request.POST['correo']
 	contraseña = request.POST['contraseña']
 	edad = request.POST['edad']
 	diccionario = {}
-	diccionario["comentario"]=usuario
+	diccionario["comentario"]=nombre
 	diccionario["comentario2"]= correo
 	diccionario["comentario3"] = contraseña
 	diccionario["comentario4"]=edad
+	usuario=Usuario(nombre=nombre, correo=correo, contrasena=contraseña, edad=edad)
+	usuario.save()
 	return render(request, "exitocreacion.html", diccionario)
 
 def iniciar(request):
